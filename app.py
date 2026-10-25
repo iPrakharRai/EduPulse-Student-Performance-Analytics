@@ -510,7 +510,7 @@ if menu == "⚡ Executive Overview & Search":
     with st.expander("📋 View Complete Filtered Tabular Records (Click to Expand)"):
         st.dataframe(
             filtered_df[['Gender', 'EthnicGroup', 'ParentEduc', 'LunchType', 'TestPrep', 'WklyStudyHours', 'MathScore', 'ReadingScore', 'WritingScore', 'AverageScore', 'Grade', 'RiskCategory']].head(150),
-            use_container_width=True,
+            width="stretch",
             height=300
         )
 
@@ -679,29 +679,46 @@ elif menu == "🎯 Behavioral Factors Studio":
     """, unsafe_allow_html=True)
 
     bf1, bf2 = st.columns(2)
+    sample_factors = df_factors.sample(min(1200, len(df_factors)), random_state=42)
+
     with bf1:
         fig_att = px.scatter(
-            df_factors.sample(min(1200, len(df_factors)), random_state=42), 
+            sample_factors, 
             x='Attendance', 
             y='Exam_Score', 
             color='AttendanceCategory',
             color_discrete_sequence=['#f87171', '#fbbf24', '#95FF50'],
-            trendline="ols",
             title="Attendance Rate vs Exam Score (Pearson r = 0.58)"
         )
+        # Exact OLS linear regression line computed with numpy (eliminates statsmodels dependency)
+        m_att, b_att = np.polyfit(sample_factors['Attendance'], sample_factors['Exam_Score'], 1)
+        x_att = np.array([sample_factors['Attendance'].min(), sample_factors['Attendance'].max()])
+        fig_att.add_trace(go.Scatter(
+            x=x_att, y=m_att * x_att + b_att,
+            mode='lines',
+            name='Trendline (OLS)',
+            line=dict(color='#ffffff', width=2.5, dash='dash')
+        ))
         fig_att.update_layout(height=380, **PLOTLY_TEMPLATE['layout'])
         st.plotly_chart(fig_att, use_container_width=True)
 
     with bf2:
         fig_study = px.scatter(
-            df_factors.sample(min(1200, len(df_factors)), random_state=42), 
+            sample_factors, 
             x='Hours_Studied', 
             y='Exam_Score', 
             color='Motivation_Level',
             color_discrete_sequence=['#fbbf24', '#34d399', '#95FF50'],
-            trendline="ols",
             title="Weekly Study Hours vs Exam Score (Pearson r = 0.45)"
         )
+        m_stu, b_stu = np.polyfit(sample_factors['Hours_Studied'], sample_factors['Exam_Score'], 1)
+        x_stu = np.array([sample_factors['Hours_Studied'].min(), sample_factors['Hours_Studied'].max()])
+        fig_study.add_trace(go.Scatter(
+            x=x_stu, y=m_stu * x_stu + b_stu,
+            mode='lines',
+            name='Trendline (OLS)',
+            line=dict(color='#ffffff', width=2.5, dash='dash')
+        ))
         fig_study.update_layout(height=380, **PLOTLY_TEMPLATE['layout'])
         st.plotly_chart(fig_study, use_container_width=True)
 
