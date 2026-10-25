@@ -1,0 +1,50 @@
+{
+    "ttest_test_preparation": {
+        "factor": "TestPrep (completed vs none)",
+        "t_statistic": 39.4774,
+        "p_value": 0.0,
+        "mean_completed": 72.66,
+        "mean_none": 65.93,
+        "difference": 6.73,
+        "significant": true
+    },
+    "ttest_lunch_type": {
+        "factor": "LunchType (standard vs free/reduced)",
+        "t_statistic": 58.0247,
+        "p_value": 0.0,
+        "mean_standard": 71.47,
+        "mean_free_reduced": 61.9,
+        "difference": 9.57,
+        "significant": true
+    },
+    "anova_parental_education": {
+        "factor": "Parental Education Level",
+        "f_statistic": 250.8901,
+        "p_value": 2.0360837277e-314,
+        "significant": true
+    },
+    "anova_weekly_study_hours": {
+        "factor": "Weekly Study Hours (<5, 5-10, >10)",
+        "f_statistic": 75.6568,
+        "p_value": 1.673114630952689e-33,
+        "significant": true
+    },
+    "factors_correlations": {
+        "attendance_vs_exam": {
+            "pearson_r": 0.5812,
+            "p_value": 0.0
+        },
+        "study_hours_vs_exam": {
+            "pearson_r": 0.4456,
+            "p_value": 8.823e-320
+        },
+        "previous_scores_vs_exam": {
+            "pearson_r": 0.1751,
+            "p_value": 1.2298298038697176e-46
+        },
+        "tutoring_vs_exam": {
+            "pearson_r": 0.1565,
+            "p_value": 1.7576012994692143e-37
+        }
+    }
+}

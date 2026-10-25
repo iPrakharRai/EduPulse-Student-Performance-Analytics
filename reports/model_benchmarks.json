@@ -1,0 +1,131 @@
+{
+    "exam_dataset_benchmarks": {
+        "regression_benchmarks": {
+            "Ridge Regression": {
+                "test_r2": 0.2589,
+                "test_rmse": 12.3576,
+                "test_mae": 10.0059,
+                "train_r2": 0.2576,
+                "train_rmse": 12.4749,
+                "train_mae": 10.1307
+            },
+            "Decision Tree": {
+                "test_r2": 0.2196,
+                "test_rmse": 12.6813,
+                "test_mae": 10.2548,
+                "train_r2": 0.2627,
+                "train_rmse": 12.4321,
+                "train_mae": 10.0597
+            },
+            "Random Forest": {
+                "test_r2": 0.2266,
+                "test_rmse": 12.6244,
+                "test_mae": 10.244,
+                "train_r2": 0.3859,
+                "train_rmse": 11.3457,
+                "train_mae": 9.1811
+            },
+            "Gradient Boosting": {
+                "test_r2": 0.2496,
+                "test_rmse": 12.4345,
+                "test_mae": 10.0753,
+                "train_r2": 0.2926,
+                "train_rmse": 12.1774,
+                "train_mae": 9.8748
+            },
+            "XGBoost": {
+                "test_r2": 0.2514,
+                "test_rmse": 12.4199,
+                "test_mae": 10.0599,
+                "train_r2": 0.2854,
+                "train_rmse": 12.2386,
+                "train_mae": 9.93
+            }
+        },
+        "classification_benchmarks": {
+            "Logistic Regression": {
+                "accuracy": 0.5853,
+                "precision": 0.5867,
+                "recall": 0.5853,
+                "f1_score": 0.5562
+            },
+            "Random Forest Classifier": {
+                "accuracy": 0.5786,
+                "precision": 0.5538,
+                "recall": 0.5786,
+                "f1_score": 0.5474
+            },
+            "XGBoost Classifier": {
+                "accuracy": 0.5795,
+                "precision": 0.5991,
+                "recall": 0.5795,
+                "f1_score": 0.5492
+            }
+        },
+        "best_regression_model": "Ridge Regression",
+        "features_used": [
+            "Gender",
+            "EthnicGroup",
+            "ParentEduc",
+            "LunchType",
+            "TestPrep",
+            "ParentMaritalStatus",
+            "PracticeSport",
+            "IsFirstChild",
+            "NrSiblings",
+            "TransportMeans",
+            "WklyStudyHours"
+        ]
+    },
+    "factors_dataset_benchmarks": {
+        "benchmarks": {
+            "Ridge Regression": {
+                "r2": 0.7697,
+                "rmse": 1.8044,
+                "mae": 0.4523
+            },
+            "Decision Tree": {
+                "r2": 0.4939,
+                "rmse": 2.6746,
+                "mae": 1.6446
+            },
+            "Random Forest": {
+                "r2": 0.6621,
+                "rmse": 2.1854,
+                "mae": 1.1474
+            },
+            "Gradient Boosting": {
+                "r2": 0.7378,
+                "rmse": 1.9251,
+                "mae": 0.7565
+            },
+            "XGBoost": {
+                "r2": 0.7312,
+                "rmse": 1.9493,
+                "mae": 0.809
+            }
+        },
+        "best_model": "Ridge Regression",
+        "features": [
+            "Hours_Studied",
+            "Attendance",
+            "Parental_Involvement",
+            "Access_to_Resources",
+            "Extracurricular_Activities",
+            "Sleep_Hours",
+            "Previous_Scores",
+            "Motivation_Level",
+            "Internet_Access",
+            "Tutoring_Sessions",
+            "Family_Income",
+            "Teacher_Quality",
+            "School_Type",
+            "Peer_Influence",
+            "Physical_Activity",
+            "Learning_Disabilities",
+            "Parental_Education_Level",
+            "Distance_from_Home",
+            "Gender"
+        ]
+    }
+}

@@ -1,0 +1,35 @@
+feature,importance
+LunchType_standard,0.14155328772441136
+LunchType_free/reduced,0.10204379857616008
+NrSiblings,0.0907461475779589
+EthnicGroup_group E,0.06904168675884108
+TestPrep_completed,0.06228525738097671
+TestPrep_none,0.05342688129374808
+ParentEduc_some high school,0.051002019196672105
+ParentEduc_master's degree,0.02962668894456388
+EthnicGroup_group D,0.029338877855187503
+ParentEduc_high school,0.02597371049210513
+Gender_male,0.022870691882738655
+WklyStudyHours_< 5,0.022326403556291383
+Gender_female,0.020808523267497842
+WklyStudyHours_> 10,0.01993536502653082
+PracticeSport_regularly,0.01876969208044157
+PracticeSport_never,0.01842159905971681
+ParentEduc_bachelor's degree,0.01835740753237062
+ParentMaritalStatus_divorced,0.016768779047514275
+ParentMaritalStatus_single,0.01663070349877775
+ParentMaritalStatus_married,0.01630965193260148
+WklyStudyHours_5 - 10,0.013449351551512303
+PracticeSport_sometimes,0.013346312789758754
+TransportMeans_private,0.012519573409782003
+IsFirstChild_yes,0.01238627274297886
+IsFirstChild_no,0.012339791395271322
+ParentEduc_some college,0.01192643741262709
+TransportMeans_school_bus,0.011863526953497712
+EthnicGroup_group B,0.0116983837875822
+EthnicGroup_Unknown,0.01010122272387582
+EthnicGroup_group A,0.009867543096790532
+EthnicGroup_group C,0.009225109631210654
+ParentEduc_associate's degree,0.008871411876086116
+ParentEduc_Unknown,0.008614832974376582
+ParentMaritalStatus_widowed,0.0075530569695440065

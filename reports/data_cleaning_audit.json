@@ -1,0 +1,79 @@
+{
+    "exam_scores": {
+        "dataset_name": "Students Exam Scores (30k)",
+        "initial_shape": [
+            30641,
+            15
+        ],
+        "final_shape": [
+            30641,
+            20
+        ],
+        "initial_nulls": {
+            "Unnamed: 0": 0,
+            "Gender": 0,
+            "EthnicGroup": 1840,
+            "ParentEduc": 1845,
+            "LunchType": 0,
+            "TestPrep": 1830,
+            "ParentMaritalStatus": 1190,
+            "PracticeSport": 631,
+            "IsFirstChild": 904,
+            "NrSiblings": 1572,
+            "TransportMeans": 3134,
+            "WklyStudyHours": 955,
+            "MathScore": 0,
+            "ReadingScore": 0,
+            "WritingScore": 0
+        },
+        "remaining_nulls": {},
+        "engineered_features": [
+            "TotalScore",
+            "AverageScore",
+            "Grade",
+            "RiskCategory",
+            "Passed",
+            "WklyStudyHours_Num"
+        ]
+    },
+    "performance_factors": {
+        "dataset_name": "Student Performance Factors",
+        "initial_shape": [
+            6607,
+            20
+        ],
+        "final_shape": [
+            6607,
+            24
+        ],
+        "initial_nulls": {
+            "Hours_Studied": 0,
+            "Attendance": 0,
+            "Parental_Involvement": 0,
+            "Access_to_Resources": 0,
+            "Extracurricular_Activities": 0,
+            "Sleep_Hours": 0,
+            "Previous_Scores": 0,
+            "Motivation_Level": 0,
+            "Internet_Access": 0,
+            "Tutoring_Sessions": 0,
+            "Family_Income": 0,
+            "Teacher_Quality": 78,
+            "School_Type": 0,
+            "Peer_Influence": 0,
+            "Physical_Activity": 0,
+            "Learning_Disabilities": 0,
+            "Parental_Education_Level": 90,
+            "Distance_from_Home": 67,
+            "Gender": 0,
+            "Exam_Score": 0
+        },
+        "remaining_nulls": {},
+        "engineered_features": [
+            "Grade",
+            "RiskCategory",
+            "AttendanceCategory",
+            "StudyLifeBalanceHours"
+        ]
+    }
+}
